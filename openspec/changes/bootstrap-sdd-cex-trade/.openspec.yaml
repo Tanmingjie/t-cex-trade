@@ -1,0 +1,4 @@
+schema: spec-driven
+created: 2026-08-17
+goal: Establish project context, baseline capability specs, and the first
+  implementation plan before scaffolding code.

@@ -15,6 +15,20 @@
 ## 文档
 
 - [项目背景与详细设计](docs/project-design.md)
+- [OpenSpec SDD 配置](openspec/config.yaml)
+- [首个 SDD 变更：bootstrap-sdd-cex-trade](openspec/changes/bootstrap-sdd-cex-trade/proposal.md)
+
+## SDD 工作流
+
+本项目使用 [OpenSpec](https://openspec.dev/) 管理后续需求、设计和实现任务。每个有业务含义的变更都应先创建 OpenSpec change，再进入编码。
+
+推荐流程：
+
+1. 提出变更：`$openspec-propose "要实现的功能"`
+2. 审阅并调整 `proposal.md`、`specs/`、`design.md`、`tasks.md`
+3. 按 `tasks.md` 实现代码并同步勾选任务
+4. 校验：`openspec validate <change-name> --type change --strict`
+5. 完成后归档，让能力规格沉淀到 `openspec/specs/`
 
 ## 推荐开发节奏
 

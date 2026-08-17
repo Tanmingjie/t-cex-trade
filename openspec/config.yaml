@@ -1,0 +1,67 @@
+schema: spec-driven
+
+# Project context (optional)
+# This is shown to AI when creating artifacts.
+# Add your tech stack, conventions, style guides, domain knowledge, etc.
+# Example:
+#   context: |
+#     Tech stack: TypeScript, React, Node.js
+#     We use conventional commits
+#     Domain: e-commerce platform
+context: |
+  Project: t-cex-trade
+  Domain: Mini centralized exchange (CEX) trading system for Java backend learning and job preparation.
+  Primary goal: build a traceable, interview-ready backend system around orders, assets, matching, settlement, Kafka events, reconciliation, and operational reliability.
+  Target stack: Java 21, Spring Boot 3.x, MyBatis/MyBatis Plus, MySQL 8, Redis, Kafka, Docker Compose, JUnit 5.
+  Development style: spec-driven development. Every meaningful behavior change starts with an OpenSpec change containing proposal, spec deltas, design, and tasks before code.
+  Domain constraints:
+    - Core trading, matching, asset freezing, settlement, and reconciliation are deterministic backend flows.
+    - AI features are allowed only as auxiliary capabilities, such as risk explanations, customer-service knowledge base, and log analysis.
+    - Redis can accelerate reads, rate limits, and hot data, but MySQL asset and ledger records remain the source of truth.
+    - Money and asset changes must be auditable, idempotent, and recoverable.
+  Documentation:
+    - docs/project-design.md contains the initial product and architecture concept.
+    - openspec/ is the source of truth for future change intent and behavior contracts.
+
+# Per-artifact rules (optional)
+# Add custom rules for specific artifacts.
+# Example:
+#   rules:
+#     proposal:
+#       - Keep proposals under 500 words
+#       - Always include a "Non-goals" section
+#     tasks:
+#       - Break tasks into chunks of max 2 hours
+rules:
+  proposal:
+    - Keep scope small enough for one coherent implementation milestone.
+    - Always mention whether the change affects asset correctness, order correctness, or external APIs.
+  specs:
+    - Write observable behavior only; implementation details belong in design.md.
+    - Every asset, order, settlement, or event requirement must include idempotency or failure behavior when applicable.
+  design:
+    - Call out consistency boundaries, transaction boundaries, and recovery strategy for core trading flows.
+  tasks:
+    - Keep tasks verifiable and small enough to implement or review in one focused session.
+
+# Per-operation guidance (optional)
+# Add advisory guidance for how apply and archive work should be conducted.
+# This is separate from artifact rules above.
+# Example:
+#   operations:
+#     apply:
+#       guidance:
+#         - Keep test summaries concise
+#     archive:
+#       guidance:
+#         - Summarize the archive outcome before finishing
+operations:
+  apply:
+    guidance:
+      - Implement from OpenSpec tasks in order and update tasks.md as work completes.
+      - Do not add unrelated modules while applying a change.
+      - Prefer tests around asset, order, settlement, and event idempotency logic.
+  archive:
+    guidance:
+      - Archive only after code, tests, and documentation match the accepted spec.
+      - Summarize which main specs were updated.
