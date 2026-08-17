@@ -1,0 +1,4 @@
+schema: spec-driven
+created: 2026-08-17
+goal: Prepare a runnable Java 21 Spring Boot project with local infrastructure
+  configuration and clear module boundaries before domain implementation.
