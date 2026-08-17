@@ -1,0 +1,54 @@
+spring:
+  application:
+    name: t-cex-trade
+  profiles:
+    active: local
+  datasource:
+    url: jdbc:mysql://localhost:3306/t_cex_trade?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: t_cex
+    password: t_cex
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      timeout: 3s
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: t-cex-trade-local
+      auto-offset-reset: earliest
+      enable-auto-commit: false
+    producer:
+      acks: all
+      retries: 3
+
+server:
+  port: 8080
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      probes:
+        enabled: true
+  health:
+    db:
+      enabled: false
+    redis:
+      enabled: false
+    kafka:
+      enabled: false
+
+mybatis:
+  mapper-locations: classpath*:mapper/**/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+
+logging:
+  level:
+    root: info
+    com.tanmingjie.tcextrade: debug

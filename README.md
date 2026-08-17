@@ -30,6 +30,46 @@
 4. 校验：`openspec validate <change-name> --type change --strict`
 5. 完成后归档，让能力规格沉淀到 `openspec/specs/`
 
+## 本地开发
+
+### 环境要求
+
+- JDK 21
+- Maven 3.9+
+- Docker Desktop
+
+### 启动基础设施
+
+```powershell
+docker compose up -d mysql redis kafka
+```
+
+默认本地服务：
+
+- MySQL: `localhost:3306`，库名 `t_cex_trade`，用户 `t_cex`，密码 `t_cex`
+- Redis: `localhost:6379`
+- Kafka: `localhost:9092`
+
+### 启动应用
+
+```powershell
+mvn spring-boot:run
+```
+
+启动后检查健康状态：
+
+```powershell
+Invoke-RestMethod http://localhost:8080/actuator/health
+```
+
+### 轻量验证
+
+```powershell
+mvn test
+```
+
+当前脚手架只验证 Spring Boot 应用上下文和模块边界，不包含资产、订单、撮合、清算等业务接口。
+
 ## 推荐开发节奏
 
 1. 先实现资产、充值、下单冻结、撤单解冻。
