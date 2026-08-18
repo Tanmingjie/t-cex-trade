@@ -16,6 +16,7 @@
 
 - [项目背景与详细设计](docs/project-design.md)
 - [功能学习地图](docs/learning-map.md)
+- [学习与项目推进计划](docs/study-schedule.md)
 - [OpenSpec SDD 配置](openspec/config.yaml)
 - [首个 SDD 归档：bootstrap-sdd-cex-trade](openspec/changes/archive/2026-08-17-bootstrap-sdd-cex-trade/proposal.md)
 
