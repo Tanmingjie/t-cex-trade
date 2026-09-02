@@ -1,6 +1,6 @@
 # Target Job Matrix
 
-> Snapshot date: 2026-08-31. Job descriptions change frequently; verify the official page before applying.
+> Snapshot date: 2026-09-01. Job descriptions change frequently; verify the official page before applying.
 
 ## Positioning
 
@@ -17,6 +17,7 @@ This project should become the evidence for that positioning: a Java trading bac
 | Maersk | [Software Engineer-Java](https://maersk.wd3.myworkdayjobs.com/en-US/Maersk_Careers/job/Software-Engineer-Java_R189040) | Java backend, logistics/order flow, distributed services, global collaboration | Main target | Strong fit for event-driven backend and English work scenarios |
 | EPAM | [Java Backend Engineer](https://careers.epam.com/en/vacancy/java-backend-engineer-bltrrs88oqs8ioclu5h_en) | Java, API-first design, microservices, cloud, CI/CD, international delivery | Main target | Good benchmark for engineering maturity and English communication |
 | Manulife | [Back-end Software Engineer](https://manulife.wd3.myworkdayjobs.com/en-US/MFCJH_Jobs/job/Back-end-Software-Engineer---HIREFITHK3328_JR26071440) | Financial backend, API integration, maintainable services, global team | Main target | Good fit for stability, WLB, and finance-domain backend |
+| SAP | [SAP Jobs in China](https://jobs.sap.com/go/SAP-Jobs-in-China/881201/) | Enterprise software, ERP/cloud platform, AI application backend, global engineering culture | Watch / benchmark | Chengdu matching role is not stable; use as AI Agent/backend and WLB benchmark |
 | Global Payments | [Careers](https://jobs.globalpayments.com/) | Payment technology, transaction systems, settlement, risk, backend reliability | Watch / apply when matched | Chengdu Java HC needs continuous tracking |
 | TD SYNNEX | [Careers](https://careers.tdsynnex.com/) | Enterprise IT systems, Java backend, familiar domain background | Opportunity only | Degree requirement is a hard gate; try only via referral or direct business contact |
 
@@ -42,6 +43,13 @@ This project should become the evidence for that positioning: a Java trading bac
 - Prepare stories around API integration, data consistency, batch/reconciliation, and performance improvement.
 - Avoid over-selling Web3; present the project as a financial transaction backend practice.
 - English practice: explain a production issue, root cause, fix, and prevention plan.
+
+### SAP
+
+- Emphasize enterprise backend engineering: maintainability, API contracts, cloud services, platform thinking, and long-term product quality.
+- Track China and Chengdu openings weekly; current highly relevant AI Agent backend roles may appear outside Chengdu.
+- Use SAP as a WLB and global-engineering benchmark even when there is no immediately suitable opening.
+- English practice: explain how AI Agent tool calling can be safely integrated into enterprise backend workflows.
 
 ### Global Payments
 
@@ -127,7 +135,7 @@ This project should become the evidence for that positioning: a Java trading bac
 - Start small-batch applications to Maersk / EPAM / Manulife-like roles.
 - Run weekly mock interviews in Chinese and English.
 - Update the project based on real JD and interview feedback.
-- Decide whether Global Payments/payment roles deserve more focus.
+- Decide whether SAP / Global Payments roles deserve more focus.
 
 ## Application Strategy
 
